@@ -1,0 +1,11 @@
+<h1>タスク作成</h1>
+<%= form_with model: @post, local: true do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.text_field :content, style: "padding: 10px; width: 300px" %>
+      </td>
+    </tr>
+  </table>
+  <%= f.submit value: "作成",  style: "margin-left: 130px; margin-top: 10px; padding: 5px" %>
+<% end %>
