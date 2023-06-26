@@ -16,6 +16,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def done
+    @post = Post.find(params[:id])
+    @post.update(state: true)
+    redirect_to root_path
+  end
+
   private
 
   def post_params
