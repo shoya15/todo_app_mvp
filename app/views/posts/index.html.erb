@@ -1,0 +1,13 @@
+<div><%= link_to "タスクを追加する", new_post_path %></div>
+<h1>タスク一覧</h1>
+<% @posts.each do |post| %>
+  <div style="margin: 15px; padding-bottom: 15px; border-bottom: solid 1px #C0C0C0; width: 50%">
+    <div>id: <%= post.id %></div>
+    <div>タスク内容: <%= post.content %></div>
+    <% if post.state %>
+      <button style="margin-top: 10px">完了</button>
+    <% else %>
+      <button style="margin-top: 10px">未完了</button>
+    <% end %>
+  </div>
+<% end %>
