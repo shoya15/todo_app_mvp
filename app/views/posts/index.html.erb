@@ -5,9 +5,10 @@
     <div>id: <%= post.id %></div>
     <div>タスク内容: <%= post.content %></div>
     <% if post.state %>
-      <button style="margin-top: 10px">完了</button>
+      <div>ステータス: 完了</div>
     <% else %>
-      <button style="margin-top: 10px">未完了</button>
+      <div style="margin-bottom: 10px">ステータス: 未完了</div>
+      <%= button_to "完了", done_path(post) %>
     <% end %>
   </div>
 <% end %>
